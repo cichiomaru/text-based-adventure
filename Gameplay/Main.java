@@ -1,4 +1,8 @@
 package Gameplay;
+
+import HeroType.Archer;
+import HeroType.Warrior;
+
 /*
  * Adventure Game
  * Text based
@@ -28,7 +32,11 @@ public class Main {
 
 	private void CreateCharacter() {
 		// TODO Auto-generated method stub
+		Archer archer = new Archer();
+		Warrior warrior = new Warrior();
 		
+		archer.RangedAttack();
+		warrior.Rage();
 	}
 
 	private void ShowWelcomeMessage() {
