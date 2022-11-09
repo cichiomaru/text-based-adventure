@@ -34,9 +34,22 @@ public class Main {
 		// TODO Auto-generated method stub
 		Archer archer = new Archer();
 		Warrior warrior = new Warrior();
+		Enemy enemy = new Enemy();
+		Building building = new Building();
 		
 		archer.RangedAttack();
 		warrior.Rage();
+		
+		archer.TakeDamage(10);
+		warrior.TakeDamage(10);
+		//enemy.TakeDamage(10);
+		
+		IAttack[] targets = new IAttack[3];
+		targets[0] = archer;
+		targets[1] = warrior;
+		targets[2] = enemy;
+		
+		archer.Attack(enemy);
 	}
 
 	private void ShowWelcomeMessage() {

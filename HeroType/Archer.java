@@ -1,8 +1,11 @@
 package HeroType;
 
+import Gameplay.Enemy;
 import Gameplay.Hero;
+import Gameplay.IAttack;
+import Gameplay.IDamageable;
 
-public class Archer extends Hero {
+public class Archer extends Hero implements IDamageable, IAttack {
 	private int ammo;
 	
 	public Archer() {
@@ -16,5 +19,14 @@ public class Archer extends Hero {
 		} else {
 			System.out.println("Insufficient ammo.");
 		}
+	}
+	@Override
+	public void TakeDamage(int damage) {
+		int value = damage * 2;
+		hp -= value;
+	}
+	@Override
+	public void Attack(IDamageable target) {
+		target.TakeDamage(10);
 	}
 }

@@ -1,13 +1,18 @@
 package Gameplay;
 
-public class Enemy {
+public class Enemy implements IDamageable, IAttack {
 	public String name;
 	public int hp;
 	
-	public void ChangeName (String name) {
+	@Override
+	public void TakeDamage(int damage) {
 		
 	}
-	public void TakeDamage (int damage) {
+
+	@Override
+	public void Attack(IDamageable target) {
+		// TODO Auto-generated method stub
 		
 	}
+	
 }
